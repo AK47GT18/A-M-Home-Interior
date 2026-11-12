@@ -1,6 +1,7 @@
 import React from "react";
 import {
   HiArrowRight,
+  HiArrowLeft,
   HiArrowUpRight,
   HiChevronLeft,
   HiChevronRight,
@@ -33,6 +34,7 @@ import {
 
 export {
   HiArrowRight as ArrowRight,
+  HiArrowLeft as ArrowLeft,
   HiArrowUpRight as ArrowUpRight,
   HiChevronLeft as ChevronLeft,
   HiChevronRight as ChevronRight,

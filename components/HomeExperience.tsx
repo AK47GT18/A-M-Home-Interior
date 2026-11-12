@@ -1,9 +1,9 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { FEATURED_PROJECTS, Project } from "@/lib/data";
+import { FEATURED_PROJECTS } from "@/lib/data";
 import {
   ArrowRight,
   ArrowUpRight,
@@ -12,8 +12,6 @@ import {
 } from "./icons";
 
 export function HomeExperience() {
-  const [selectedProjectModal, setSelectedProjectModal] = useState<Project | null>(null);
-
   const showcaseServices = [
     {
       id: "srv-1",
@@ -256,13 +254,13 @@ export function HomeExperience() {
                     Highland Hills Ridge • 680 m² Triple Level
                   </p>
                 </div>
-                <button
-                  type="button"
-                  onClick={() => setSelectedProjectModal(FEATURED_PROJECTS[0])}
-                  className="px-5 py-2.5 rounded-full bg-white text-black text-xs font-bold uppercase tracking-wider hover:bg-[#c59b4e] transition-colors shadow-md shrink-0 font-heading"
+                <Link
+                  href="/projects/obsidian-pavilion"
+                  className="px-5 py-2.5 rounded-full bg-white text-black text-xs font-bold uppercase tracking-wider hover:bg-[#c59b4e] transition-colors shadow-md shrink-0 font-heading inline-flex items-center gap-1.5"
                 >
-                  Inspect
-                </button>
+                  <span>View Project</span>
+                  <ArrowRight className="w-3.5 h-3.5" />
+                </Link>
               </div>
             </div>
           </div>
@@ -523,87 +521,6 @@ export function HomeExperience() {
         </div>
       </section>
 
-      {/* Project Lightbox Inspection Modal */}
-      {selectedProjectModal && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md animate-fade-in">
-          <div className="bg-white border border-black/10 rounded-3xl max-w-3xl w-full max-h-[90vh] overflow-y-auto p-6 sm:p-8 relative shadow-2xl">
-            <button
-              type="button"
-              onClick={() => setSelectedProjectModal(null)}
-              className="absolute top-6 right-6 w-9 h-9 rounded-full bg-zinc-100 hover:bg-zinc-200 text-[#0d0f12] flex items-center justify-center transition-colors font-bold"
-              aria-label="Close"
-            >
-              ✕
-            </button>
-
-            <div className="relative h-64 sm:h-80 w-full rounded-2xl overflow-hidden mb-6">
-              <Image
-                src={selectedProjectModal.imageUrl}
-                alt={selectedProjectModal.title}
-                fill
-                className="object-cover"
-              />
-            </div>
-
-            <div className="space-y-4">
-              <div className="flex items-center gap-3">
-                <span className="px-3.5 py-1 rounded-full text-xs font-bold bg-[#0d0f12] text-[#c59b4e] uppercase tracking-wider font-heading">
-                  {selectedProjectModal.category}
-                </span>
-                <span className="text-xs text-zinc-500 flex items-center gap-1 font-medium">
-                  <MapPinIcon className="w-3.5 h-3.5 text-[#c59b4e]" />
-                  {selectedProjectModal.location}
-                </span>
-              </div>
-
-              <h3 className="text-2xl sm:text-3xl font-heading font-medium text-[#0d0f12]">
-                {selectedProjectModal.title}
-              </h3>
-              <p className="text-sm text-zinc-600 font-light leading-relaxed">
-                {selectedProjectModal.description}
-              </p>
-
-              <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 p-4 rounded-xl bg-zinc-50 border border-black/5 text-xs">
-                <div>
-                  <span className="text-zinc-400 block uppercase tracking-wider text-[10px] font-semibold font-heading">
-                    Scale
-                  </span>
-                  <span className="text-[#0d0f12] font-semibold">{selectedProjectModal.specs}</span>
-                </div>
-                <div>
-                  <span className="text-zinc-400 block uppercase tracking-wider text-[10px] font-semibold font-heading">
-                    Delivery
-                  </span>
-                  <span className="text-[#0d0f12] font-semibold">{selectedProjectModal.year}</span>
-                </div>
-                <div>
-                  <span className="text-zinc-400 block uppercase tracking-wider text-[10px] font-semibold font-heading">
-                    Status
-                  </span>
-                  <span className="text-[#c59b4e] font-semibold">Turnkey Completed</span>
-                </div>
-              </div>
-
-              <div className="pt-4 flex justify-between items-center">
-                <Link
-                  href="/contact"
-                  onClick={() => setSelectedProjectModal(null)}
-                  className="px-6 py-3 rounded-full bg-[#0d0f12] text-white text-xs font-semibold tracking-wider uppercase hover:bg-[#c59b4e] hover:text-black transition-colors font-heading"
-                >
-                  Commission Similar Project
-                </Link>
-                <button
-                  type="button"
-                  onClick={() => setSelectedProjectModal(null)}
-                  className="text-xs text-zinc-500 hover:text-black uppercase tracking-wider font-heading"
-                >
-                  Close
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
     </div>
   );
 }

@@ -159,7 +159,9 @@ export function Navbar() {
         <div className="border-t border-black/10 pt-6 flex flex-col space-y-3 text-xs text-zinc-600">
           <div className="flex items-center gap-2 text-[#111215] font-semibold">
             <PhoneIcon className="w-4 h-4 text-[#c59b4e]" />
-            <span>+265 (0) 99 812 3456</span>
+            <a href="tel:+265997637667" className="hover:text-[#c59b4e] transition-colors">
+              0997 637 667
+            </a>
           </div>
           <p className="tracking-wider uppercase text-[10px] text-zinc-400 font-sans">
             A&amp;M HOME INTERIORS • Architectural Living

@@ -78,9 +78,10 @@ export function HomeSummary() {
             <div className="lg:col-span-6 relative">
               <div className="relative h-[420px] sm:h-[480px] w-full rounded-3xl overflow-hidden shadow-lg image-zoom-container">
                 <Image
-                  src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=85"
+                  src="/photos/1794461710939.jpg"
                   alt="A&M Atelier Living Sanctuary"
                   fill
+                  quality={90}
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-cover"
                 />
@@ -192,11 +193,11 @@ export function HomeSummary() {
                       {proj.specs}
                     </span>
                     <Link
-                      href="/projects"
+                      href={`/projects/${proj.id}`}
                       className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#121316] hover:text-[#c59b4e] transition-colors"
                     >
-                      <span>Specifications</span>
-                      <ArrowUpRight className="w-4 h-4" />
+                      <span>Explore Project</span>
+                      <ArrowRight className="w-4 h-4" />
                     </Link>
                   </div>
                 </div>
@@ -359,10 +360,10 @@ export function HomeSummary() {
                 </Link>
 
                 <a
-                  href="tel:+265998123456"
+                  href="tel:+265997637667"
                   className="inline-flex items-center gap-2 px-6 py-4 rounded-full border border-white/20 text-white text-xs font-medium tracking-wider uppercase hover:bg-white/10 transition-colors"
                 >
-                  <span>Direct Line: +265 99 812 3456</span>
+                  <span>Direct Line: 0997 637 667</span>
                 </a>
               </div>
             </div>

@@ -42,6 +42,7 @@ export function HeroSlideshow() {
               alt={item.title}
               fill
               priority={idx === 0}
+              quality={95}
               sizes="100vw"
               className="object-cover object-center"
             />

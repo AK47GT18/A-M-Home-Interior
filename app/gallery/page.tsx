@@ -55,10 +55,11 @@ export default function GalleryPage() {
       <section className="relative pt-36 pb-20 bg-[#121316] text-white overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-25">
           <Image
-            src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=2400&q=85"
+            src="/photos/1794461740779.jpg"
             alt="Gallery Architectural Archive"
             fill
             priority
+            quality={90}
             sizes="100vw"
             className="object-cover object-center"
           />

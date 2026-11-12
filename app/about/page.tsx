@@ -29,10 +29,11 @@ export default function AboutPage() {
       <section className="relative pt-36 pb-20 sm:pb-24 bg-[#121316] text-white overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-25">
           <Image
-            src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2400&q=85"
+            src="/photos/1794461734071.jpg"
             alt="A&M Atelier Architecture Panorama"
             fill
             priority
+            quality={90}
             sizes="100vw"
             className="object-cover object-center"
           />

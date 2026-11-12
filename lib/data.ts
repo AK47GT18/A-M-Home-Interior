@@ -9,7 +9,10 @@ export interface Project {
   area: string;
   badge?: string;
   imageUrl: string;
+  galleryImages?: string[];
   description: string;
+  overview?: string;
+  materials?: string[];
   features: string[];
 }
 
@@ -141,8 +144,18 @@ export const FEATURED_PROJECTS: Project[] = [
     area: "680 m²",
     badge: "Signature Commission",
     imageUrl: "/photos/1794461352147.jpg",
+    galleryImages: [
+      "/photos/1794461352147.jpg",
+      "/photos/1794461618177.jpg",
+      "/photos/1794461445300.jpg",
+      "/photos/1794461520065.jpg",
+      "/photos/1794461528224.jpg",
+    ],
     description:
       "A dramatic dialogue between dark structural steel, fluted dark oak, and bookmatched Calacatta Viola marble. Designed to frame panoramic mountain views with recessed perimeter lighting.",
+    overview:
+      "Commissioned by a private collector, The Obsidian Pavilion sits perched above Highland Hills with monolithic restraint. Our studio oversaw full volumetric space planning, bespoke interior architectural detailing, custom-crafted Italian marble millwork, and museum-grade illumination.",
+    materials: ["Smoked European Oak", "Calacatta Viola Marble", "Structural Blackened Steel", "Honed Basalt Pavers"],
     features: ["Double-height hearth room", "Floating cantilevered staircase", "Concealed chef's kitchen", "Wine cellar gallery"],
   },
   {
@@ -156,8 +169,18 @@ export const FEATURED_PROJECTS: Project[] = [
     area: "820 m²",
     badge: "Architecture Award",
     imageUrl: "/photos/1794461360288.jpg",
+    galleryImages: [
+      "/photos/1794461360288.jpg",
+      "/photos/1794461435215.jpg",
+      "/photos/1794461530694.jpg",
+      "/photos/1794461535928.jpg",
+      "/photos/1794461546702.jpg",
+    ],
     description:
       "Harmonious Mediterranean minimalism featuring honed travertine terraces, sunken olive courtyards, and organic curved walls that soften brutalist proportions.",
+    overview:
+      "Villa Solaria balances sculptural mass with warm daylight. We engineered seamless transitions between the indoor living salons and shaded outdoor courtyards, accented by bespoke Roman travertine slabs and soft plaster finishes.",
+    materials: ["Navona Roman Travertine", "Hand-troweled Lime Plaster", "Bleached White Oak", "Aged Brass Fixtures"],
     features: ["Reflecting water court", "Sunken conversational pit", "Artisan plaster walls", "Integrated smart climate"],
   },
   {
@@ -171,8 +194,18 @@ export const FEATURED_PROJECTS: Project[] = [
     area: "450 m²",
     badge: "Urban Distinction",
     imageUrl: "/photos/1794461364033.jpg",
+    galleryImages: [
+      "/photos/1794461364033.jpg",
+      "/photos/1794461567843.jpg",
+      "/photos/1794461584456.jpg",
+      "/photos/1794461593670.jpg",
+      "/photos/1794461596924.jpg",
+    ],
     description:
       "A serene urban retreat high above the city. Custom blackened bronze island, acoustic fluted timber acoustic panels, and minimalist bespoke lighting fixtures.",
+    overview:
+      "Spanning two uppermost levels of a metropolitan tower, this duplex was stripped back to concrete slabs and recomposed with tailor-made acoustic millwork, monolithic bronze culinary counters, and double-height custom glazing.",
+    materials: ["Patinated Architectural Bronze", "Acoustic Slatted Ash", "Nero Marquina Marble", "Belgian Linen Textiles"],
     features: ["360° Glass gallery", "Private rooftop pool lounge", "Primary suite with dual dressing halls", "Custom bronze fireplace"],
   },
   {
@@ -186,8 +219,18 @@ export const FEATURED_PROJECTS: Project[] = [
     area: "520 m²",
     badge: "Eco-Luxury",
     imageUrl: "/photos/1794461366967.jpg",
+    galleryImages: [
+      "/photos/1794461366967.jpg",
+      "/photos/1794461599351.jpg",
+      "/photos/1794461631162.jpg",
+      "/photos/1794461634253.jpg",
+      "/photos/1794461641535.jpg",
+    ],
     description:
       "Seamless indoor-outdoor living pavilion featuring green slate floors, expansive sliding pocket doors, and sustainable cross-laminated timber beams.",
+    overview:
+      "Embedded in ancient pine woodland, the Forest Edge Pavilion blurs structural boundaries with invisible floor-to-ceiling pocket sliders, tactile timber ceilings, and geothermal floor warming throughout.",
+    materials: ["Cross-Laminated Timber", "Rough-Hewn Green Slate", "Cast Glass Screens", "Brushed Gunmetal"],
     features: ["Zero-threshold transitions", "Zen gravel meditation room", "Natural radiant geothermal heating", "Library reading lounge"],
   },
   {
@@ -201,8 +244,18 @@ export const FEATURED_PROJECTS: Project[] = [
     area: "390 m²",
     badge: "Craft Heritage",
     imageUrl: "/photos/1794461373777.jpg",
+    galleryImages: [
+      "/photos/1794461373777.jpg",
+      "/photos/1794461645076.jpg",
+      "/photos/1794461665325.jpg",
+      "/photos/1794461688606.jpg",
+      "/photos/1794461697679.jpg",
+    ],
     description:
       "Refined craft-first interior integrating hand-carved local timber accents, bronze hardware, linen wall-coverings, and warm museum-grade accent lighting.",
+    overview:
+      "Designed as a tranquil sanctuary for an architect and artist couple, this residence features hand-joined architectural cabinetry, customized bronze hardware, and soft, indirect illumination.",
+    materials: ["Malawian Teak Accents", "Raw Silk Wall Panels", "Brushed Champagne Bronze", "Polished Terrazzo"],
     features: ["Custom bespoke dining table", "Sculptural fireplace", "Tea ceremony lounge", "Private terrace garden"],
   },
   {
@@ -216,8 +269,18 @@ export const FEATURED_PROJECTS: Project[] = [
     area: "750 m²",
     badge: "Master Collection",
     imageUrl: "/photos/1794461431811.jpg",
+    galleryImages: [
+      "/photos/1794461431811.jpg",
+      "/photos/1794461701749.jpg",
+      "/photos/1794461707791.jpg",
+      "/photos/1794461710939.jpg",
+      "/photos/1794461731174.jpg",
+    ],
     description:
       "Luminous geometry defined by pure limestone volumes, water courtyards, and ethereal sheer drapery that catches natural lakeside breezes.",
+    overview:
+      "Perched on Lakeview Plateau, Elysian Glasshouse stands as an ode to sunlight and tranquility. The double-height great room flows seamlessly into an outdoor culinary pavilion and private reflection pools.",
+    materials: ["Portuguese Moleanos Limestone", "Extra-Clear Low-Iron Glass", "Brushed Nickel Detailing", "Pure Linen Drapery"],
     features: ["Infinity pool connection", "Private gallery corridor", "Bespoke master spa", "Outdoor culinary pavilion"],
   },
 ];

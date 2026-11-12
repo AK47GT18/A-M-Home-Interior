@@ -17,9 +17,10 @@ export function PreFooterCTA() {
       {/* Background Architectural Panorama */}
       <div className="absolute inset-0 z-0 opacity-35">
         <Image
-          src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=2400&q=85"
+          src="/photos/1794461731174.jpg"
           alt="Panoramic Villa Architecture"
           fill
+          quality={90}
           sizes="100vw"
           className="object-cover object-center"
         />
