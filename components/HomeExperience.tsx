@@ -96,70 +96,70 @@ export function HomeExperience() {
       {/* ------------------------------------------------------------ */}
       {/* ATELIER STATEMENT + 4 STAT CARDS (Exact match to uploaded layout) */}
       {/* ------------------------------------------------------------ */}
-      <section className="py-20 sm:py-28 border-b border-black/5 bg-white">
+      <section className="py-12 sm:py-28 border-b border-black/5 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-16">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-start mb-8 sm:mb-16">
             <div className="lg:col-span-3">
               <span className="text-xs font-bold uppercase tracking-widest text-[#c59b4e] block font-heading">
                 ABOUT US
               </span>
             </div>
-            <div className="lg:col-span-9 space-y-4">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-heading font-medium text-[#0d0f12] leading-snug">
+            <div className="lg:col-span-9 space-y-3 sm:space-y-4">
+              <h2 className="text-xl sm:text-3xl md:text-4xl font-heading font-medium text-[#0d0f12] leading-snug">
                 Turning ordinary residences into thriving architectural sanctuaries since 2012, with 180+ completed commissions. We take pride in delivering bespoke interior solutions that match your space, style, and schedule.
               </h2>
-              <p className="text-sm sm:text-base text-zinc-500 font-light leading-relaxed max-w-3xl">
+              <p className="text-xs sm:text-base text-zinc-500 font-light leading-relaxed max-w-3xl">
                 Every successful spatial transformation begins with a thoughtful conversation. During this private consultation, our team takes the time to understand your lifestyle, proportion preferences, and material aspirations.
               </p>
             </div>
           </div>
 
-          {/* 4 Clean Stat Cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="p-8 rounded-2xl bg-[#fafaf9] border border-black/5 shadow-xs card-lift space-y-3">
-              <div className="stat-number text-4xl sm:text-5xl font-bold text-[#c59b4e]">
-                180<span className="text-2xl font-normal">+</span>
+          {/* 4 Clean Stat Cards: 2x2 grid on mobile for compactness, 4 columns on desktop */}
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
+            <div className="p-4 sm:p-8 rounded-2xl bg-[#fafaf9] border border-black/5 shadow-xs card-lift space-y-1.5 sm:space-y-3">
+              <div className="stat-number text-3xl sm:text-5xl font-bold text-[#c59b4e]">
+                180<span className="text-xl sm:text-2xl font-normal">+</span>
               </div>
-              <h4 className="text-sm font-bold text-[#0d0f12] tracking-tight font-heading">
+              <h4 className="text-xs sm:text-sm font-bold text-[#0d0f12] tracking-tight font-heading">
                 Transforming Residencies
               </h4>
-              <p className="text-xs text-zinc-500 leading-relaxed font-light">
+              <p className="text-[11px] sm:text-xs text-zinc-500 leading-relaxed font-light">
                 Landmark private villas and penthouses delivered across the continent.
               </p>
             </div>
 
-            <div className="p-8 rounded-2xl bg-[#fafaf9] border border-black/5 shadow-xs card-lift space-y-3">
-              <div className="stat-number text-4xl sm:text-5xl font-bold text-[#c59b4e]">
-                12<span className="text-2xl font-normal">+</span>
+            <div className="p-4 sm:p-8 rounded-2xl bg-[#fafaf9] border border-black/5 shadow-xs card-lift space-y-1.5 sm:space-y-3">
+              <div className="stat-number text-3xl sm:text-5xl font-bold text-[#c59b4e]">
+                12<span className="text-xl sm:text-2xl font-normal">+</span>
               </div>
-              <h4 className="text-sm font-bold text-[#0d0f12] tracking-tight font-heading">
+              <h4 className="text-xs sm:text-sm font-bold text-[#0d0f12] tracking-tight font-heading">
                 Years Atelier Mastery
               </h4>
-              <p className="text-xs text-zinc-500 leading-relaxed font-light">
+              <p className="text-[11px] sm:text-xs text-zinc-500 leading-relaxed font-light">
                 Pioneering architectural clarity, daylighting, and bespoke millwork since 2012.
               </p>
             </div>
 
-            <div className="p-8 rounded-2xl bg-[#fafaf9] border border-black/5 shadow-xs card-lift space-y-3">
-              <div className="stat-number text-4xl sm:text-5xl font-bold text-[#c59b4e]">
-                99<span className="text-2xl font-normal">%</span>
+            <div className="p-4 sm:p-8 rounded-2xl bg-[#fafaf9] border border-black/5 shadow-xs card-lift space-y-1.5 sm:space-y-3">
+              <div className="stat-number text-3xl sm:text-5xl font-bold text-[#c59b4e]">
+                99<span className="text-xl sm:text-2xl font-normal">%</span>
               </div>
-              <h4 className="text-sm font-bold text-[#0d0f12] tracking-tight font-heading">
+              <h4 className="text-xs sm:text-sm font-bold text-[#0d0f12] tracking-tight font-heading">
                 Customer Satisfaction
               </h4>
-              <p className="text-xs text-zinc-500 leading-relaxed font-light">
+              <p className="text-[11px] sm:text-xs text-zinc-500 leading-relaxed font-light">
                 Commissions executed with absolute discretion and on-schedule handover.
               </p>
             </div>
 
-            <div className="p-8 rounded-2xl bg-[#fafaf9] border border-black/5 shadow-xs card-lift space-y-3">
-              <div className="stat-number text-4xl sm:text-5xl font-bold text-[#c59b4e]">
-                50<span className="text-2xl font-normal">+</span>
+            <div className="p-4 sm:p-8 rounded-2xl bg-[#fafaf9] border border-black/5 shadow-xs card-lift space-y-1.5 sm:space-y-3">
+              <div className="stat-number text-3xl sm:text-5xl font-bold text-[#c59b4e]">
+                50<span className="text-xl sm:text-2xl font-normal">+</span>
               </div>
-              <h4 className="text-sm font-bold text-[#0d0f12] tracking-tight font-heading">
+              <h4 className="text-xs sm:text-sm font-bold text-[#0d0f12] tracking-tight font-heading">
                 Atelier Disciplines
               </h4>
-              <p className="text-xs text-zinc-500 leading-relaxed font-light">
+              <p className="text-[11px] sm:text-xs text-zinc-500 leading-relaxed font-light">
                 Rare marble slabbing, custom cabinetry, smart automation, and spatial styling.
               </p>
             </div>
