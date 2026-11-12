@@ -1,26 +1,101 @@
 @import "tailwindcss";
 
+/* A&M Home Interiors - Architectural Theme */
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #0d0f12;
+  --card-bg: #ffffff;
+  --card-subtle: #f8f9fa;
+  --card-border: rgba(13, 15, 18, 0.08);
+  --accent-gold: #c59b4e;
+  --accent-olive: #2b3a2a;
+  --dark-accent: #0d0f12;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-heading: var(--font-outfit), sans-serif;
+  --font-body: var(--font-jakarta), sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  color-scheme: light;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-jakarta), -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  overflow-x: hidden;
+  selection-background-color: #0d0f12;
+  selection-color: #ffffff;
+}
+
+/* Headings and Titles use Outfit */
+h1, h2, h3, h4, h5, h6, .font-heading {
+  font-family: var(--font-outfit), sans-serif;
+  letter-spacing: -0.025em;
+}
+
+/* Numbers and Stat Highlights */
+.stat-number {
+  font-family: var(--font-outfit), sans-serif;
+  font-feature-settings: "tnum";
+  letter-spacing: -0.03em;
+}
+
+::selection {
+  background-color: #0d0f12;
+  color: #ffffff;
+}
+
+/* Seamless Continuous Marquee Animation - Zero Gaps, 100% Fluid 60fps */
+@keyframes continuousSlide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-continuous-scroll {
+  display: flex;
+  width: max-content;
+  animation: continuousSlide 38s linear infinite;
+  will-change: transform;
+}
+
+.animate-continuous-scroll:hover {
+  animation-play-state: paused;
+}
+
+/* Smooth Horizontal Scroll Hide Bar */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Card hover dynamics */
+.card-lift {
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.card-lift:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.09);
+}
+
+.image-zoom {
+  overflow: hidden;
+}
+.image-zoom img {
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.image-zoom:hover img {
+  transform: scale(1.06);
 }

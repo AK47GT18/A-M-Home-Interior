@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="135 115 230 170">
+  <style>
+    .s { stroke: #000; }
+    .f { fill: #000; }
+    @media (prefers-color-scheme: dark) {
+      .s { stroke: #fff; }
+      .f { fill: #fff; }
+    }
+  </style>
+
+  <!-- Left Wall & Peak -->
+  <path class="s" d="M 170 275 L 170 158 L 228 118 L 228 275"
+    stroke-width="13" stroke-linecap="square" stroke-linejoin="miter" fill="none"/>
+
+  <!-- Right Sloped Roof & Wall -->
+  <path class="s" d="M 228 118 L 325 203 L 325 275"
+    stroke-width="13" stroke-linecap="square" stroke-linejoin="miter" fill="none"/>
+
+  <!-- Ground Line -->
+  <line class="s" x1="135" y1="279" x2="360" y2="279"
+    stroke-width="13" stroke-linecap="square"/>
+
+  <!-- Left 'i' Column (dot + stem) -->
+  <rect class="f" x="197" y="158" width="20" height="21"/>
+  <rect class="f" x="197" y="189" width="20" height="82"/>
+
+  <!-- Pendant Lamp -->
+  <line class="s" x1="255" y1="143" x2="255" y2="178" stroke-width="5" stroke-linecap="round"/>
+  <path class="f" d="M 243 183 Q 255 171 267 183 Z"/>
+
+  <!-- Armchair -->
+  <path class="f" d="M 250 213 Q 271 213 281 213 C 289 213 294 219 294 228 L 294 239
+    C 294 243 292 247 288 250 C 288 256 283 260 276 260 L 251 260
+    C 244 260 239 256 239 250 C 236 247 234 243 234 239 L 234 228
+    C 234 219 240 213 250 213 Z"/>
+  <line class="s" x1="251" y1="260" x2="249" y2="271" stroke-width="4.5" stroke-linecap="round"/>
+  <line class="s" x1="280" y1="260" x2="282" y2="271" stroke-width="4.5" stroke-linecap="round"/>
+</svg>
+
