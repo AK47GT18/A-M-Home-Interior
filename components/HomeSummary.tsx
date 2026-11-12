@@ -350,20 +350,20 @@ export function HomeSummary() {
                 We accept a limited number of residential commissions each year to ensure uncompromising director-level attention and bespoke artisan execution.
               </p>
 
-              <div className="flex flex-wrap items-center gap-4 pt-4">
+              <div className="flex flex-row items-center gap-2.5 sm:gap-4 pt-4">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-2.5 px-8 py-4 rounded-full bg-white text-black text-xs font-semibold tracking-widest uppercase hover:bg-[#c59b4e] hover:text-black transition-all duration-300 shadow-xl group"
+                  className="inline-flex items-center justify-center gap-1.5 sm:gap-2.5 px-4 sm:px-8 py-3.5 sm:py-4 rounded-full bg-white text-black text-[11px] sm:text-xs font-semibold tracking-wider uppercase hover:bg-[#c59b4e] hover:text-black transition-all duration-300 shadow-xl group whitespace-nowrap"
                 >
-                  <span>Request Private Consultation</span>
-                  <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
+                  <span>Request Consultation</span>
+                  <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 transition-transform duration-300 group-hover:translate-x-1" />
                 </Link>
 
                 <a
                   href="tel:+265997637667"
-                  className="inline-flex items-center gap-2 px-6 py-4 rounded-full border border-white/20 text-white text-xs font-medium tracking-wider uppercase hover:bg-white/10 transition-colors"
+                  className="inline-flex items-center justify-center gap-1.5 sm:gap-2 px-3.5 sm:px-6 py-3.5 sm:py-4 rounded-full border border-white/20 text-white text-[11px] sm:text-xs font-medium tracking-wider uppercase hover:bg-white/10 transition-colors whitespace-nowrap"
                 >
-                  <span>Direct Line: 0997 637 667</span>
+                  <span>Call: 0997 637 667</span>
                 </a>
               </div>
             </div>

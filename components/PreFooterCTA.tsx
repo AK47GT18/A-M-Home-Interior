@@ -38,18 +38,18 @@ export function PreFooterCTA() {
           From preliminary volumetric space planning to rare stone selection and bespoke millwork commissioning, our studio directors are at your service.
         </p>
 
-        {/* Dual CTAs */}
-        <div className="pt-2 flex flex-wrap items-center justify-center gap-3.5">
+        {/* Dual CTAs - side by side on mobile */}
+        <div className="pt-2 flex flex-row items-center justify-center gap-2 sm:gap-3.5">
           <Link
             href={isContactPage ? "#contact" : "/contact"}
-            className="inline-flex items-center gap-2 px-7 py-3 rounded-full bg-white text-black text-xs font-bold uppercase tracking-wider hover:bg-[#c59b4e] transition-colors font-heading shadow-md"
+            className="inline-flex items-center justify-center gap-1.5 sm:gap-2 px-4 sm:px-7 py-3 rounded-full bg-white text-black text-[11px] sm:text-xs font-bold uppercase tracking-wider hover:bg-[#c59b4e] transition-colors font-heading shadow-md whitespace-nowrap"
           >
-            <span>Initiate A Commission</span>
+            <span>Initiate Commission</span>
             <ArrowRight className="w-3.5 h-3.5" />
           </Link>
           <Link
             href="/projects"
-            className="inline-flex items-center gap-2 px-7 py-3 rounded-full bg-white/10 text-white border border-white/20 text-xs font-bold uppercase tracking-wider hover:bg-white/20 transition-colors font-heading backdrop-blur-md"
+            className="inline-flex items-center justify-center gap-1.5 sm:gap-2 px-4 sm:px-7 py-3 rounded-full bg-white/10 text-white border border-white/20 text-[11px] sm:text-xs font-bold uppercase tracking-wider hover:bg-white/20 transition-colors font-heading backdrop-blur-md whitespace-nowrap"
           >
             <span>Explore Portfolio</span>
           </Link>

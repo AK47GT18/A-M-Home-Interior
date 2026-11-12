@@ -66,22 +66,14 @@ export function HeroSlideshow() {
             {slide.subtitle}
           </p>
 
-          {/* Call-to-action buttons */}
-          <div className="flex flex-wrap items-center gap-4 pt-3">
+          {/* Call-to-action button */}
+          <div className="pt-3">
             <Link
               href="/projects"
               className="inline-flex items-center gap-2.5 px-8 py-4 rounded-full bg-white text-black text-xs sm:text-sm font-semibold tracking-wider uppercase transition-all duration-300 hover:bg-[#c59b4e] hover:text-black hover:shadow-xl shadow-md group"
             >
               <span>Explore Projects</span>
               <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
-            </Link>
-
-            <Link
-              href="/contact"
-              className="inline-flex items-center gap-2 px-7 py-4 rounded-full bg-black/40 backdrop-blur-md border border-white/25 text-white text-xs sm:text-sm font-medium tracking-wider uppercase transition-all duration-300 hover:bg-white/20"
-            >
-              <span>Schedule Consultation</span>
-              <ArrowUpRight className="w-4 h-4 text-zinc-300 group-hover:text-white" />
             </Link>
           </div>
         </div>

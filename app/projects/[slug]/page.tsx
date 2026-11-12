@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: PageProps) {
   };
 }
 
-export default async function ProjectDetailPage({ params }: PageProps) {
+async function ProjectContent({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const project = FEATURED_PROJECTS.find((p) => p.id === slug);
 
@@ -34,14 +34,14 @@ export default async function ProjectDetailPage({ params }: PageProps) {
     notFound();
   }
 
-  // Related projects (other projects in the portfolio)
   const relatedProjects = FEATURED_PROJECTS.filter((p) => p.id !== project.id).slice(0, 3);
-  const images = project.galleryImages && project.galleryImages.length > 0 
-    ? project.galleryImages 
-    : [project.imageUrl];
+  const images =
+    project.galleryImages && project.galleryImages.length > 0
+      ? project.galleryImages
+      : [project.imageUrl];
 
   return (
-    <div className="bg-white min-h-screen text-[#0d0f12]">
+    <>
       {/* ------------------------------------------------------------ */}
       {/* 1. HERO COVER HEADER */}
       {/* ------------------------------------------------------------ */}
@@ -60,7 +60,6 @@ export default async function ProjectDetailPage({ params }: PageProps) {
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Back button */}
           <Link
             href="/projects"
             className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-zinc-300 hover:text-white transition-colors mb-8 font-heading group"
@@ -133,7 +132,6 @@ export default async function ProjectDetailPage({ params }: PageProps) {
       {/* ------------------------------------------------------------ */}
       <section className="py-16 sm:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-          {/* Main Description */}
           <div className="lg:col-span-7 space-y-6">
             <span className="text-xs font-bold uppercase tracking-widest text-[#c59b4e] font-heading block">
               Architectural Monograph
@@ -148,7 +146,6 @@ export default async function ProjectDetailPage({ params }: PageProps) {
               {project.description}
             </p>
 
-            {/* Inquire CTA */}
             <div className="pt-6">
               <Link
                 href="/contact"
@@ -160,7 +157,6 @@ export default async function ProjectDetailPage({ params }: PageProps) {
             </div>
           </div>
 
-          {/* Key Features & Materials Card */}
           <div className="lg:col-span-5 bg-[#fafaf9] rounded-3xl p-8 border border-black/5 space-y-6">
             <div>
               <h3 className="text-base font-bold text-[#0d0f12] font-heading uppercase tracking-wider mb-4">
@@ -200,7 +196,7 @@ export default async function ProjectDetailPage({ params }: PageProps) {
       </section>
 
       {/* ------------------------------------------------------------ */}
-      {/* 4. DEDICATED PROJECT IMAGE GALLERY (ALL RELATED PHOTOS) */}
+      {/* 4. DEDICATED PROJECT IMAGE GALLERY */}
       {/* ------------------------------------------------------------ */}
       <section className="py-16 sm:py-24 bg-[#0d0f12] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -218,7 +214,6 @@ export default async function ProjectDetailPage({ params }: PageProps) {
             </span>
           </div>
 
-          {/* Gallery Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {images.map((imgSrc, idx) => (
               <div
@@ -307,7 +302,30 @@ export default async function ProjectDetailPage({ params }: PageProps) {
           ))}
         </div>
       </section>
+    </>
+  );
+}
+
+function ProjectDetailSkeleton() {
+  return (
+    <div className="min-h-screen bg-white">
+      <div className="pt-36 pb-28 bg-[#0d0f12] text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+          <div className="w-36 h-4 bg-zinc-800 rounded animate-pulse" />
+          <div className="w-3/4 max-w-lg h-12 bg-zinc-800 rounded-lg animate-pulse" />
+          <div className="w-1/2 max-w-md h-6 bg-zinc-800 rounded animate-pulse" />
+        </div>
+      </div>
     </div>
   );
 }
 
+export default function ProjectDetailPage({ params }: PageProps) {
+  return (
+    <div className="bg-white min-h-screen text-[#0d0f12]">
+      <Suspense fallback={<ProjectDetailSkeleton />}>
+        <ProjectContent params={params} />
+      </Suspense>
+    </div>
+  );
+}
